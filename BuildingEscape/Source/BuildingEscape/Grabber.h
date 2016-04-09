@@ -23,8 +23,16 @@ public:
 
 private:
 	
+	//How far the player's reach is (in cm) to pick up objects
 	UPROPERTY(EditAnywhere)
 		float ReachLength = 100.0f;
 
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	
+	UInputComponent* InputComponent = nullptr;
+
+	//Ray-Cast and grab object in reach
+	void Grab();
+	//Release any grabbed object
+	void Release();
 };
