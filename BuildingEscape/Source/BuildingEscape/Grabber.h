@@ -26,13 +26,15 @@ private:
 	
 	//How far the player's reach is (in cm) to pick up objects
 	UPROPERTY(EditAnywhere)
-		float ReachLength = 100.0f;
+	float ReachLength = 100.0f;
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+
+	UInputComponent* InputComponent = nullptr;
+
 	// Find (assumed) attached physics handle
 	void FindPhysicsHandleComponent();
 
-	UInputComponent* InputComponent = nullptr;
 	// Setup (assumed) attached input component
 	void SetupInputComponent();
 
